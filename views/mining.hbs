@@ -1,0 +1,110 @@
+<nav data-spy="scroll" class="navbar navbar-expand-xl sticky-top">
+    <a class="logo" href="/dashboard"><img src="https://i.imgur.com/LRKdmoz.png" id="logo" />  </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContentXL" aria-controls="navbarSupportedContentXL" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContentXL">
+        <ul class="navbar-nav mr-auto">
+            <li id="arrow_box" class="nav-item ">
+                <a class="btn" href="/dashboard">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/report">Report</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/exchanges">Exchanges</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/graph">Graph</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="btn" href="/news">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/forum">Forum</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/coin">About Coins</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/about">About Us</a>
+            </li>
+            <li>
+                <form class="form-inline my-2 my-sm-0">
+                    <select id="toggleSwitch" class="btn btn-outline-light my-2 my-sm-0 " style="background:#1C1B1B">
+                        Change
+                        Background
+                        <option value="#1C1B1B">Dark mode</option>
+                        <option value="#ffffff">Light mode</option>
+
+                    </select></form>
+            </li>
+
+        </ul>
+        <header class="header-bar mb-2">
+            <div class="container d-flex flex-column flex-md-row align-items-center p-2">
+                <div class="flex-row my-2 my-md-0">
+
+                    <strong style="color: white;text-transform: capitalize;">Hi,<a class="mr-2"
+                            id="navusername">{{username}}</a></strong>
+                    <form action="/logout" method="POST" class="d-inline">
+                        <button class="btn btn-sm btn-danger">Sign Out</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-sm " style="background-color: rgb(194, 183, 183); ">
+    <div class="navbar-nav mx-auto">
+        <a class="n1 nav-item " style="color:rgb(66, 57, 57);" href="/gambling"><b>Gambling</b></a>
+        <a class="n1 nav-item " style="color:rgb(66, 57, 57);" href="/wallet"><b>Wallets</b></a>
+        <a class="n1 nav-item  active" style="color:rgb(66, 57, 57);" href="/mining"><b>Mining</b></a>
+    </div>
+</nav>
+</div>
+
+
+<div class="container">
+
+    <div class="table-responsive ">
+
+        <table class="table">
+
+            <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th class='d-none d-sm-table-cell' scope="col">Country</th>
+                    <th class='d-none d-sm-table-cell' id="r" scope="col">Rating <i class="fa fa-fw fa-sort"></i></th>
+                    <th scope="col">website</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{increment @index}}</td>
+                    <td>
+                        <image class=" mr-1" style="width: 2rem;" src="https://www.cryptocompare.com{{this.LogoUrl}}">
+                        </image>{{this.Name}}
+                    </td>
+                    <td class='d-none d-sm-table-cell'>{{this.Country}}</td>
+                    <td class='d-none d-sm-table-cell'><span>{{this.Rating.Avg}}<span
+                                class="fa fa-star text-warning ml-1"></span></span></td>
+                    <td><a target="_blank" style="color: orangered" href="{{this.AffiliateURL}}">{{this.Name}}</a>
+                    </td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<footer></footer>

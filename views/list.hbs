@@ -1,0 +1,111 @@
+<nav data-spy="scroll" class="navbar navbar-expand-xl sticky-top">
+    <a class="logo" href="/dashboard"><img src="https://i.imgur.com/LRKdmoz.png" id="logo" />  </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContentXL" aria-controls="navbarSupportedContentXL" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContentXL">
+        <ul class="navbar-nav mr-auto">
+            <li id="arrow_box" class="nav-item ">
+                <a class="btn" href="/dashboard">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/report">Report</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/exchanges">Exchanges</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/graph">Graph</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="btn" href="/news">News</a>
+            </li>
+            <li class="nav-item active">
+                <a class="btn" href="/forum">Forum</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/coin">About Coins</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn" href="/about">About Us</a>
+            </li>
+            <li>
+                <form class="form-inline my-2 my-sm-0">
+                    <select id="toggleSwitch" class="btn btn-outline-light my-2 my-sm-0 " style="background:#1C1B1B">
+                        Change
+                        Background
+                        <option value="#1C1B1B">Dark mode</option>
+                        <option value="#ffffff">Light mode</option>
+
+                    </select></form>
+            </li>
+        </ul>
+        <header class="header-bar mb-2">
+            <div class="container d-flex flex-column flex-md-row align-items-center p-2">
+                <div class="flex-row my-2 my-md-0">
+
+                    <strong style="color: white;text-transform: capitalize;">Hi,<a class="mr-2"
+                            id="navusername">{{username}}</a></strong>
+                    <form action="/logout" method="POST" class="d-inline">
+                        <button class="btn btn-sm btn-danger">Sign Out</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-sm " style="background-color: rgb(194, 183, 183); ">
+    <div class="navbar-nav mx-auto">
+        <a class="btn nav-item nav-link" style="color:rgb(66, 57, 57);" href="/gambling"><b>Gambling</b></a>
+        <a class="btn nav-item nav-link" style="color:rgb(66, 57, 57);" href="/wallet"><b>Wallets</b></a>
+        <a class="btn nav-item nav-link" style="color:rgb(66, 57, 57);" href="/mining"><b>Mining</b></a>
+    </div>
+</nav>
+</div>
+
+<div class="container mt-5">
+
+    <div class="table-responsive " id="refreshdiv">
+        <table class="table">
+            <button id="create-new" type="button" class="active btn btn-amber"> <a href="/forum"> Create
+                    New+</a></button>
+
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Comments</th>
+                    <th class='d-none d-sm-table-cell'>CreatedAt</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+
+                </tr>
+                {{#each list}}
+                <tr>
+                    <th>{{this.name}}</th>
+                    <td>{{this.comments}}</td>
+                    <td class='d-none d-sm-table-cell'>{{this.createdAt}}</td>
+                    <td>
+                        <a href="/forum/{{this._id}}"><i class="fas fa-edit" style='font-size:25px'
+                                aria-hidden="true"></i></a> <br>
+                        <a href="/forum/delete/{{this._id}}"
+                            onclick="return confirm('Are you sure to delete this post?');"><i class="fa fa-trash fa-lg"
+                                aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+</div>

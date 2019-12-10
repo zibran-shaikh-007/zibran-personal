@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js"></script>
+
+</head>
+
+<body>
+
+
+    <span  id="sparkline1" >1,4,4,7,5,9,10,1,</span>
+
+<script>
+    $('#sparkline1').sparkline('html', {
+  width: 80,
+  height: 80,
+  lineColor: '#0083CD',
+  fillColor: false
+
+});
+</script>
+
+</body>
+
+</html>

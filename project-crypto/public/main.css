@@ -1,0 +1,420 @@
+body {
+    background-color: #1C1B1B;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.bg-image {
+    background-image: url('https://wallpapertag.com/wallpaper/middle/d/2/a/753891-download-free-bitcoin-wallpapers-1920x1080-download-free.jpg');
+    /* background-image: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'); */
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}
+
+
+/*TABLE CSS START*/
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+table th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+table th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+table td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+table td:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+thead tr {
+    background-color: #fe951c;
+    color: black;
+}
+
+thead {
+    font-size: 20px;
+    background-color: #3b3a30;
+    color: rgb(93, 105, 105);
+}
+
+tbody {
+    font-size: 17px;
+}
+
+td,
+tr {
+    background-color: #3b3a30;
+    color: wheat;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+    #refreshdiv {
+        padding: 0px;
+    }
+    table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+
+/*TABLE CSS ENDS HERE*/
+
+
+/*NAVIGATION CSS*/
+
+#navusername {
+    color: #fe951c;
+}
+
+.navbar {
+    background-color: #1C1B1B;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: #fe951c;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(252, 179, 45)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.btn,
+a {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+b:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* Style the active class, and buttons on mouse-over */
+
+.active {
+    background-color: #fe951c;
+    border-radius: 8px;
+}
+
+.n1 {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/*NAVIGATION CSS ENDS HERE*/
+
+
+/*COINS CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.team-section {
+    overflow: hidden;
+    text-align: center;
+    background: #1C1B1B;
+    padding: 60px;
+}
+
+.team-section h1 {
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 40px;
+}
+
+.border {
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 3px;
+    background: #fe951c;
+    margin-bottom: 40px;
+}
+
+.ps {
+    margin-bottom: 40px;
+}
+
+.ps a {
+    display: inline-block;
+    margin: 0 30px;
+    width: 160px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 20%;
+}
+
+.ps a img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.4s all;
+}
+
+.ps a:hover>img {
+    filter: none;
+}
+
+.section {
+    width: auto;
+    margin: auto;
+    font-size: 20px;
+    color: #fe951c;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+
+.about {
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    height: auto;
+    /*overflow: hidden;*/
+}
+
+.section:target {
+    height: auto;
+}
+
+.name {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+    /*webkit-box-sizing: border-box;*/
+    box-sizing: border-box;
+}
+
+.starttitle {
+    margin: 70px 0 50px;
+    color: #FF7E00;
+    text-align: center;
+    line-height: 65px;
+    font-family: "Titillium Web", Arial, sans-serif;
+    font-size: 16px;
+    display: block;
+}
+
+.starttitle span {
+    font-size: 162%;
+}
+
+.start:nth-child(2) {
+    border-bottom: 1px solid #DADADA;
+}
+
+.start {
+    position: relative;
+    padding-bottom: 175px;
+}
+
+.start-block {
+    position: relative;
+}
+
+.start-block:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAY1BMVEX///8AAADb29vf39/w8PD39/f6+vrr6+vm5uaCgoKHh4c/Pz9FRUUEBAQ6OjpJSUmQkJCgoKDKysoUFBQSEhLHx8eYmJimpqZ8fHzQ0NBSUlIbGxvBwcE1NTWurq51dXVaWlr/ezdCAAABxklEQVR4nO3dC27CQAxF0XFJoC0JgUIpn37Y/ypbllDJkl8e96zAV0LB0mSU1vB4VqvqCXK8RLxWz5BhFRFjVz1Fgqe/kFhUT5GAEDWEqCFEDSFqCFGzuIc8V0+RYR0xVM+Qot/t+uoZAOAB2Tx+Xf4QbVYUm6WREDWEqCFEDSFqCFFjc/RmcxjqczwNAPPyNk3n6hky9PuI67J6igQ2uxYhaghRQ4gaQtQQosYmpD9E7B2WxvY+DG/VMwDAI+osDhVaex3HbfUMGWwOemx2LULUEKKGEDWEqCFEjc0LzG0Tsa6eIUV3PHq85A8A89J/fHg8foeIqXqGDDYris3SSIgaQtQQooYQNYSouR+9hcPRWztFvFTPkOPZYfcFgNk5Xy7csVJis2sRooYQNYSoIUQNIWpsQu53rA4Wp6Gfm/V79QwA8Ih6i3+R1rbjeKyeIUM3csdKCyFqCFFDiBpC1BCixuYF5vYVsameIUW33TosvwAwN8vvb4dXUVqbIi7VM2SwWVFslkZC1BCihhA1hKghRI3PHaufiFP1DDkWDj8sAJid8+32VD1DhuWVO1ZaCFFDiBpC1BCixuaTBDYfifD5bAf+5RcU5Qqq0LatIQAAAABJRU5ErkJggg==) no-repeat;
+}
+
+.left-column {
+    margin-right: auto;
+    text-align: right;
+    font-family: "Titillium Web", Arial, sans-serif;
+    font-size: 16px;
+}
+
+.right-column {
+    margin-left: auto;
+    text-align: left;
+    font-family: "Titillium Web", Arial, sans-serif;
+    font-size: 16px;
+}
+
+.left-column,
+.right-column {
+    max-width: 40%;
+    position: relative;
+}
+
+.start h2 {
+    margin: 0 0 20px;
+    font-size: 137.5%;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.start p {
+    margin: 0;
+    font-size: 125%;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+.start-block:nth-child(odd) .start-content::after {
+    left: 50%;
+    -webkit-transform: translate(-100%, 13px);
+    transform: translate(-100%, 13px);
+}
+
+.start-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 85px;
+    height: 3px;
+    background: #FF7E00;
+}
+
+.start-block:nth-child(1)::after {
+    background: url() no-repeat;
+}
+
+
+/*COINS CSS ENDS HERE*/
+
+
+/*FORUM STYLE*/
+
+h1,
+h3,
+label {
+    color: white;
+}
+
+
+/* #create-new {
+    position: relative;
+    left: 1300px; */
+
+
+/*FORUM STYLE ENDS HERE*/
+
+
+/*FOOTER CSS */
+
+#social-fb:hover {
+    color: #3B5998;
+}
+
+#social-tw:hover {
+    color: #4099FF;
+}
+
+#social-gp:hover {
+    color: #d34836;
+}
+
+#social-em:hover {
+    color: #f39c12;
+}
+
+footer {
+    background: scroll;
+    background-color: #1C1B1B;
+}
+
+
+/*FOOTER CSS ENDS HERE*/
+
+
+/*LOGO CSS*/
+
+#logo {
+    width: 250px;
+    height: 65px;
+}
+
+
+/*LOGO CSS ENDS HERE*/
+
+
+/*ABOUT CSS*/
+
+.ps b {
+    display: inline-block;
+    margin: 0 30px;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    color: white;
+}
+
+
+/*about css ends here*/
+
+
+/*LOGIN PAGE TEXT CSS*/
+
+.display-3 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: -1px 0 #FFD302, 0 1px #FFD302, 1px 0 #FFD302, 0 -1px #FFD302;
+    -webkit-text-stroke: 1px #FFD302;
+}
+
+.subdisplay-3 {
+    font-size: larger;
+    color: wheat;
+    letter-spacing: 2px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+/*LOGIN PAGE TEXT ENDS HERE*/
+
+
+/*EXPERIMENT CSS*/
